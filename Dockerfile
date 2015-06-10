@@ -29,7 +29,7 @@ RUN sudo -H mv composer.phar /usr/local/bin/composer
 RUN composer global require "laravel/installer=~1.1"
 RUN echo 'PATH=~/.composer/vendor/bin:$PATH' >> .bashrc
 
-ADD config/init.el ~/.emacs.d/init.el
+ADD init.el ~/.emacs.d/init.el
 
 EXPOSE 80
 EXPOSE 443
