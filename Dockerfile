@@ -29,7 +29,8 @@ RUN sudo -H mv composer.phar /usr/local/bin/composer
 RUN composer global require "laravel/installer=~1.1"
 RUN echo 'PATH=~/.composer/vendor/bin:$PATH' >> .bashrc
 
-ADD init.el ~/.emacs.d/init.el
+ADD init.el /home/hosokawa/.emacs.d/init.el
+RUN sudo -H chown -R hosokawa:hosokawa ~/.emacs.d/
 
 EXPOSE 80
 EXPOSE 443
